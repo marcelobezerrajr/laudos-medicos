@@ -4,7 +4,7 @@
 
 ### Sobre o Projeto
 
-Backend projetado para gerenciar laudos médicos, permitindo o controle eficiente de Exames eLlaudos, entre seus Médicos e Pacientes por meio de funcionalidades de CRUD (Create, Read, Update, Delete). Inclui o cadastro e a gestão de Usuários, Médicos, Pacientes, Exames, Laudos, Imagens dos Exames e Imagens dos Laudos. Ideal para clínicas que buscam uma solução integrada para otimizar processos e acompanhar os Exames e Laudos de seus pacientes.
+Backend projetado para gerenciar laudos médicos, permitindo o controle eficiente de Exames e Laudos, entre seus Médicos e Pacientes por meio de funcionalidades de CRUD (Create, Read, Update, Delete). Inclui o cadastro e a gestão de Usuários, Médicos, Pacientes, Exames, Laudos, Imagens dos Exames e Imagens dos Laudos. Ideal para clínicas que buscam uma solução integrada para otimizar processos e acompanhar os Exames e Laudos de seus pacientes.
 
 ## Funcionalidades Principais
 
