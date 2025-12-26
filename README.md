@@ -1,12 +1,10 @@
 <div align="center">
-    <img src="./assets/logo_marcelo_developer.png" height="70" style="margin-bottom: 20px; margin-top: 20px;">
-    <h1 align="center">Sistema de Laudos Médicos - Backend 🩺🏥</h1>
+    <h1 align="center">Laudos Médicos 🩺🏥</h1>
 </div>
 
 ### Sobre o Projeto
 
-Este é um sistema backend projetado para gerenciar laudos médicos, permitindo o controle eficiente de Exames eLlaudos, entre seus Médicos e Pacientes por meio de funcionalidades de CRUD (Create, Read, Update, Delete). Inclui o cadastro e a gestão de Usuários, Médicos, Pacientes, Exames, Laudos, Imagens dos Exames e Imagens dos Laudos. Ideal para clínicas que buscam uma solução integrada para otimizar processos e acompanhar os Exames e Laudos de seus pacientes.
-
+Backend projetado para gerenciar laudos médicos, permitindo o controle eficiente de Exames eLlaudos, entre seus Médicos e Pacientes por meio de funcionalidades de CRUD (Create, Read, Update, Delete). Inclui o cadastro e a gestão de Usuários, Médicos, Pacientes, Exames, Laudos, Imagens dos Exames e Imagens dos Laudos. Ideal para clínicas que buscam uma solução integrada para otimizar processos e acompanhar os Exames e Laudos de seus pacientes.
 
 ## Funcionalidades Principais
 
@@ -45,11 +43,11 @@ Este é um sistema backend projetado para gerenciar laudos médicos, permitindo 
 
 ### 2. Permissões de Usuário
 
-- **get_medico:** 
+- **get_medico:**
   - Acesso permitido apenas para médicos.
 - **get_paciente:**
   - Acesso permitido apenas para pacientes.
-- **get_medico_paciente:** 
+- **get_medico_paciente:**
   - Acesso permitido apenas para médicos e pacientes.
 
 ## Stacks utilizadas
@@ -72,8 +70,8 @@ Retorna uma lista de todos os Médicos cadastrados.
   GET /medico/list
 ```
 
-| Parâmetro   | Tipo       | Descrição                           | 
-| :---------- | :--------- | :---------------------------------- |
+| Parâmetro    | Tipo  | Descrição                       |
+| :----------- | :---- | :------------------------------ |
 | `id_usuario` | `int` | **Obrigatório**. ID do Usuário. |
 
 #### Exemplo de Requisição
@@ -107,10 +105,10 @@ Retorna os detalhes de um Médico específico.
   GET /medico/view/{id_medico}
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id_medico` | `int` | **Obrigatório**. ID do Médico que deseja consultar. |
-| `id_usuario` | `int` | **Obrigatório**. ID do Usuário que vai consultar. |
+| Parâmetro    | Tipo  | Descrição                                           |
+| :----------- | :---- | :-------------------------------------------------- |
+| `id_medico`  | `int` | **Obrigatório**. ID do Médico que deseja consultar. |
+| `id_usuario` | `int` | **Obrigatório**. ID do Usuário que vai consultar.   |
 
 #### Exemplo de Requisição
 
@@ -143,12 +141,12 @@ Adiciona um novo Médico ao sistema.
   POST /medico/create
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `especialidade` | `string` | **Obrigatório**. Especialidade do Médico. |
-| `crm` | `string` | **Obrigatório**. CRM do Médico. |
-| `id_usuario` | `int` | **Obrigatório**. ID do Usuário que vai ser adicionado como médico. |
-| `id_usuario` | `int` | **Obrigatório**. ID do Usuário que fazer a requisição para criar um novo médico. |
+| Parâmetro       | Tipo     | Descrição                                                                        |
+| :-------------- | :------- | :------------------------------------------------------------------------------- |
+| `especialidade` | `string` | **Obrigatório**. Especialidade do Médico.                                        |
+| `crm`           | `string` | **Obrigatório**. CRM do Médico.                                                  |
+| `id_usuario`    | `int`    | **Obrigatório**. ID do Usuário que vai ser adicionado como médico.               |
+| `id_usuario`    | `int`    | **Obrigatório**. ID do Usuário que fazer a requisição para criar um novo médico. |
 
 #### Exemplo de Requisição
 
@@ -174,17 +172,18 @@ Adiciona um novo Médico ao sistema.
 ```
 
 ### Atualiza um Médico
+
 Atualiza as informações de um Médico existente.
 
 ```http
   PUT /medico/update/{id_medico}
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `especialidade` | `string` | **Opcional**. Especialidade do Médico. |
-| `id_medico` | `int` | **Obrigatório**. ID do Médico que deseja atualizar. |
-| `id_usuario` | `int` | **Obrigatório**. ID do Usuário que fazer a requisição para atualizar o médico. |
+| Parâmetro       | Tipo     | Descrição                                                                      |
+| :-------------- | :------- | :----------------------------------------------------------------------------- |
+| `especialidade` | `string` | **Opcional**. Especialidade do Médico.                                         |
+| `id_medico`     | `int`    | **Obrigatório**. ID do Médico que deseja atualizar.                            |
+| `id_usuario`    | `int`    | **Obrigatório**. ID do Usuário que fazer a requisição para atualizar o médico. |
 
 #### Exemplo de Requisição
 
@@ -217,9 +216,9 @@ Remover um Médico do sistema.
   DELETE /medico/delete/{id_medico}
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id_medico` | `int` | **Obrigatório**. ID do Médico que deseja deletar. |
+| Parâmetro    | Tipo  | Descrição                                                                    |
+| :----------- | :---- | :--------------------------------------------------------------------------- |
+| `id_medico`  | `int` | **Obrigatório**. ID do Médico que deseja deletar.                            |
 | `id_usuario` | `int` | **Obrigatório**. ID do Usuário que fazer a requisição para deletar o médico. |
 
 #### Exemplo de Requisição
@@ -248,9 +247,9 @@ Retorna uma lista com todas as imagens de um Laudo.
   GET /images-laudo/list/{id_laudo}
 ```
 
-| Parâmetro   | Tipo       | Descrição                           | 
-| :---------- | :--------- | :---------------------------------- |
-| `id_laudo` | `int` | **Obrigatório**. ID do Laudo que vai ser consultado. |
+| Parâmetro    | Tipo  | Descrição                                                  |
+| :----------- | :---- | :--------------------------------------------------------- |
+| `id_laudo`   | `int` | **Obrigatório**. ID do Laudo que vai ser consultado.       |
 | `id_usuario` | `int` | **Obrigatório**. ID do Usuário que vai fazer a requisição. |
 
 #### Exemplo de Requisição
@@ -280,9 +279,9 @@ Retorna a imagem de um Laudo específico.
   GET /imagens-laudo/{id_imagem}
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id_imagem` | `int` | **Obrigatório**. ID da Imagem que deseja consultar. |
+| Parâmetro    | Tipo  | Descrição                                                |
+| :----------- | :---- | :------------------------------------------------------- |
+| `id_imagem`  | `int` | **Obrigatório**. ID da Imagem que deseja consultar.      |
 | `id_usuario` | `int` | **Obrigatório**. ID do Usuário que vai fazer a consulta. |
 
 #### Exemplo de Requisição
@@ -310,12 +309,12 @@ Adiciona uma imagem nova a um Laudo.
   POST /imagens-laudo/upload
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id_laudo` | `string` | **Obrigatório**. ID do Laudo que vai ser adicionado a imagem. |
-| `descricao` | `string` | **Obrigatório**. Descrição do Laudo que está sendo enviado. |
-| `id_usuario` | `int` | **Obrigatório**. ID do Usuário que fazer a requisição para adicionar uma nova imagem ao Laudo. |
-| `file` | `string` | **Obrigatório**. Arquivo de imagem que vai ser adicionado. |
+| Parâmetro    | Tipo     | Descrição                                                                                      |
+| :----------- | :------- | :--------------------------------------------------------------------------------------------- |
+| `id_laudo`   | `string` | **Obrigatório**. ID do Laudo que vai ser adicionado a imagem.                                  |
+| `descricao`  | `string` | **Obrigatório**. Descrição do Laudo que está sendo enviado.                                    |
+| `id_usuario` | `int`    | **Obrigatório**. ID do Usuário que fazer a requisição para adicionar uma nova imagem ao Laudo. |
+| `file`       | `string` | **Obrigatório**. Arquivo de imagem que vai ser adicionado.                                     |
 
 #### Exemplo de Requisição
 
@@ -342,9 +341,9 @@ Deleta a imagem de um Laudo.
   DELETE /imagens-laudo/delete/{id_imagem}
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id_imagem` | `int` | **Obrigatório**. ID da Imagem que deseja deletar. |
+| Parâmetro    | Tipo  | Descrição                                                                             |
+| :----------- | :---- | :------------------------------------------------------------------------------------ |
+| `id_imagem`  | `int` | **Obrigatório**. ID da Imagem que deseja deletar.                                     |
 | `id_usuario` | `int` | **Obrigatório**. ID do Usuário que fazer a requisição para deletar a imagem do Laudo. |
 
 #### Exemplo de Requisição
@@ -360,13 +359,14 @@ Deleta a imagem de um Laudo.
   "detail": "Imagem de laudo deletada com sucesso."
 }
 ```
+
 ## Guia de Instalação do Projeto (Backend: FastAPI)
 
 ### Pré-requisitos
 
 - Python 3.8+
 - Gerenciador de Pacotes:
-    - Pip para Python
+  - Pip para Python
 
 ### 1. Configuração do Backend (FastAPI)
 
@@ -401,6 +401,7 @@ Inicie com o código bash abaixou ou iniciando o arquivo `run.py`, que está no 
 ```bash
   uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
+
 O backend estará disponível em: http://localhost:8000.
 
 ## Licença
